@@ -78,9 +78,7 @@ class Unionv2API{
     }
 
     private function doResponse($data,$repname){
-        if($this->request->param("debug") == 1){
-            return $this->success("ok",$data);
-        }
+       
         $data = json_decode($data,true);
 
         if(isset($data["errorResponse"])){
